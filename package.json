@@ -1,5 +1,5 @@
 {
-  "name": "density-dwarf",
+  "name": "ronaldmc",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.15.1"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.16"
   }
 }

@@ -1,0 +1,21 @@
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'ITPBold';
+    src: url('/Fonts/ITPBold.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: 'ITPBold', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

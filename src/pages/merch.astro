@@ -3,11 +3,17 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
   <!-- Søgefelt -->
-  <img
-    class="w-[130px] ml-auto mr-10 transform transition duration-300 hover:scale-105 rounded-lg"
-    src="/Billeder/søge.svg"
-    alt="Søgefelt"
+
+ <p class="text-white text-center pt-5 pb-5 text-left text-3xl sm:text-5xl font-bold">
+    Welcome to the RackaRacka Merchandise Store, search for your favorite items!
+  </p><div class="flex pb-1 justify-center sm:justify-end sm:mr-10 mt-4">
+  <input
+    id="search"
+    type="text"
+    placeholder="Type something..."
+    class="w-[250px] p-2 rounded-lg border border-yellow-500 bg-black text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"
   />
+</div>
 
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mx-10 pt-6 text-white">
 
@@ -103,6 +109,25 @@ import Layout from "../layouts/Layout.astro";
       <p class="text-left text-lg text-yellow-500 font-small">$20.00</p>
     </div>
 
+      <!-- hoodie4 --> 
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hoodie4.webp"
+          alt="hoodie4"
+        />
+          <!-- Limited badge -->
+        <img
+          class="absolute top-[50%] right-[1%] w-[40%] object-contain z-50"
+          src="/merch/limited.svg"
+          alt="Limited edition badge"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">(Limited Edition) RackaRackaXGucci bomber jacket</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$1050.00</p>
+    </div>
+
     <!-- long1 --> 
     <div class="w-full">
       <div class="relative w-full">
@@ -129,6 +154,135 @@ import Layout from "../layouts/Layout.astro";
       <p class="text-left text-lg text-yellow-500 font-small">$16.99</p>
     </div>
 
+     <!-- hoodie1 --> 
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hoodie1.webp"
+          alt="hoodie1"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">White Ronald Hoodie</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$25.99</p>
+    </div>
+
+    <!-- hoodie2 --> 
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hoodie2.webp"
+          alt="hoodie2"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Black Ronald Hoodie</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$25.99</p>
+    </div>
+
+      <!-- hoodie3 --> 
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hoodie3.webp"
+          alt="hoodie3"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Children Ronald Hoodie</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$19.45</p>
+    </div>
+
+    <!-- hoodie5 --> 
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hoodie5.webp"
+          alt="hoodie5"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Ronald inspired Raincoat</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$30.00</p>
+    </div>
+
+    <!-- bag1 -->
+ <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/bag1.webp"
+          alt="bag1"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Ronald Gym-Bag</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$10.00</p>
+    </div>
+
+     <!-- bag2 -->
+ <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/bag2.webp"
+          alt="bag2"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">RackaRacka and Ronald Bagpack</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$34.99</p>
+    </div>
+
+    <!-- hat1 -->
+ <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hat1.webp"
+          alt="hat1"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">RackaRacka logo cap</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$10.00</p>
+    </div>
+
+     <!-- hat2 -->
+ <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hat2.webp"
+          alt="hat2"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Ronald Embroidered Cap (Version SIMPLE)</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$15.00</p>
+    </div>
+
+     <!-- hat3 -->
+ <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hat3.webp"
+          alt="hat3"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Ronald Embroidered Cap (Version 3D)</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$15.00</p>
+    </div>
+
+     <!-- hat4 -->
+ <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/hat4.webp"
+          alt="hat4"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Ronald Embroidered Cap (Version DETAILED)</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$15.00</p>
+    </div>
     <!-- T-shirt3 -->
     <div class="w-full">
       <div class="relative w-full">
@@ -198,4 +352,24 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
  </div>
+
+  <script>
+const searchInput = document.getElementById("search");
+const products = document.querySelectorAll(".grid > .w-full");
+
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const searchValue = (e.target as HTMLInputElement).value.toLowerCase();
+    
+    products.forEach((product) => {
+      // Find produktets navn fra <p> tagget
+      const nameElement = product.querySelector("p.font-semibold");
+      const name = nameElement ? nameElement.textContent.toLowerCase() : "";
+      
+      // Vis eller skjul produktet baseret på søgningen
+      (product as HTMLElement).style.display = name.includes(searchValue) ? "" : "none";
+    });
+  });
+}
+  </script>
 </Layout>

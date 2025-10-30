@@ -2,7 +2,171 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
-      <p class="flex text-xl sm:text-xl md:text-xl text-left mb-5 mt-1">
-       merchandise
-      </p>
+  <!-- Søgefelt -->
+  <img
+    class="w-[130px] ml-auto mr-10 transform transition duration-300 hover:scale-105 rounded-lg"
+    src="/Billeder/søge.svg"
+    alt="Søgefelt"
+  />
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mx-10 pt-6 text-white">
+
+    <!-- T-shirt1 -->
+    <div class="w-full">
+      <!-- Billede container med badge -->
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 transform transition duration-300 hover:scale-105 border-yellow-500 rounded-lg"
+          src="/merch/t-shirt1.webp"
+          alt="t-shirt1"
+        />
+        
+        <!-- Limited badge -->
+        <img
+          class="absolute top-[50%] right-[1%] w-[40%] object-contain z-50"
+          src="/merch/limited.svg"
+          alt="Limited edition badge"
+        />
+      </div>
+      
+      <!-- Tekst udenfor billede-containeren -->
+      <p class="mt-2 text-left text-lg font-semibold">(Limited Edition) Haunted House Tour T-Shirt</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$29.90</p>
+    </div>
+
+    <!-- T-shirt2 -->
+    <div class="w-full">
+      <!-- Billede container med badge -->
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/t-shirt2.webp"
+          alt="t-shirt2"
+        />
+
+        <!-- Limited badge -->
+       <img
+          class="absolute top-[50%] right-[1%] w-[40%] object-contain z-50"
+          src="/merch/limited.svg"
+          alt="Limited edition badge"
+        />
+      </div>
+      
+      <!-- Tekst udenfor billede-containeren -->
+      <p class="mt-2 text-left text-lg font-semibold">(Limited Edition) Haunted House Tour T-Shirt V2</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$29.90</p>
+    </div>
+
+    <!-- poster1 -->
+    <div class="w-full">
+      <!-- Billede container med badge -->
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/poster2.jpeg"
+          alt="Poster1"
+        />
+        
+        <!-- Limited badge -->
+        <img
+          class="absolute top-[50%] right-[1%] w-[40%] object-contain z-50"
+          src="/merch/limited.svg"
+          alt="Limited edition badge"
+        />
+      </div>
+      
+      <!-- Tekst udenfor billede-containeren -->
+      <p class="mt-2 text-left text-lg font-semibold">(Limited Edition) Haunted House Tour Poster</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$20.00</p>
+    </div>
+
+    <!-- poster2 -->
+    <div class="w-full">
+      <!-- Billede container med badge -->
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/poster1.webp"
+          alt="Poster2"
+        />
+        
+        <!-- Limited badge -->
+        <img
+          class="absolute top-[50%] right-[1%] w-[40%] object-contain z-50"
+          src="/merch/limited.svg"
+          alt="Limited edition badge"
+        />
+      </div>
+      
+      <!-- Tekst udenfor billede-containeren -->
+      <p class="mt-2 text-left text-lg font-semibold">(Limited Edition) Haunted House Tour Poster V2</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$20.00</p>
+    </div>
+
+    <!-- long1 --> 
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/long1.webp"
+          alt="long1"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Wrestling Ronald Long Sleeve</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$16.99</p>
+    </div>
+    
+    <!-- T-shirt3 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/t-shirt3.webp"
+          alt="t-shirt3"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Vintage Logo T-Shirt</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$16.99</p>
+    </div>
+
+    <!-- mug1 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/mug1.webp"
+          alt="mug1"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Baby Ronald Mug</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$14.98</p>
+    </div>
+
+    <!-- mug2 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/mug2.webp"
+          alt="mug2"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Real-Ronald Mug</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$14.98</p>
+    </div>
+
+    <!-- dukke1 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/dukke1.webp"
+          alt="dukke1"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Ronald Voodoo-Doll</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$60.50</p>
+    </div>
+  </div>
+
 </Layout>

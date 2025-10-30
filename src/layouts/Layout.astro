@@ -13,42 +13,46 @@ import "../styles/global.css";
   </head>
 
   <body 
-  style="background-color: #272425;"
-  class="min-h-screen flex flex-col">
+    style="background-color: #272425;"
+    class="min-h-screen flex flex-col text-white"
+  >
     <!-- Header øverst -->
     <div
-      class="relative flex flex-col items-center bg-black p-5 rounded-xl z-20 mx-3 mt-5"
+      class="relative flex flex-col items-center bg-black p-4 sm:p-6 rounded-xl z-20 mx-3 mt-5"
     >
       <!-- Tekst øverst -->
       <img
-        src="/Billeder/rackarackatekst.svg"
-        alt="Rackaracka tekst"
-        class="absolute left-1/2 transform -translate-x-1/2 h-26 object-contain scale-x-350"
-      />
+  src="/Billeder/rackarackatekst.svg"
+  alt="Rackaracka tekst"
+  class="object-contain w-full
+         h-24 sm:h-28 md:h-36 lg:h-40 xl:h-48"
+  style="transform: scaleX(2.5); transform-origin: center;"
+/>
 
       <!-- Logo under teksten -->
       <img
         src="/Billeder/rackarackalogo.svg"
         alt="Logo1"
-        class="w-28 mt-23 object-contain"
+        class="w-28 object-contain"
       />
     </div>
 
-	<div class="bg-[#6F6E70] mt-5 min-h-[300vh] justify-center">
-    <!-- tekst fra venstre -->
-    <div class="w-full pt-8 p-4">
-      <nav class="bg-[#272425] text-white flex justify-center gap-10 py-5 rounded-xl shadow-lg uppercase tracking-widest font-semibold">
-  <a href="/" class="hover:text-red-500 transition">Frontpage</a>
-  <a href="/merch" class="hover:text-yellow-500 transition">Merch</a>
-  <a href="/events" class="hover:text-red-500 transition">Events</a>
-  <a href="/contact" class="hover:text-yellow-500 transition">Contact</a>
-  <a href="/about" class="hover:text-red-500 transition">About us</a>
-</nav>
+    <!-- Baggrundssektion -->
+    <div class="bg-[#6F6E70] mt-5 min-h-[100vh] flex flex-col items-center justify-start p-4 sm:p-8">
+      
+      <!-- Navigation -->
+      <nav class="bg-[#272425] text-white flex flex-wrap justify-center gap-6 sm:gap-10 py-4 px-5 rounded-xl shadow-lg uppercase tracking-widest font-semibold w-full max-w-3xl">
+        <a href="/" class="hover:text-red-500 transform transition duration-300 hover:scale-110">Frontpage</a>
+        <a href="/merch" class="hover:text-yellow-500 transform transition duration-300 hover:scale-110">Merch</a>
+        <a href="/events" class="hover:text-red-500 transform transition duration-300 hover:scale-110">Events</a>
+        <a href="/about" class="hover:text-yellow-500 transform transition duration-300 hover:scale-110">About us</a>
+        <a href="/contact" class="hover:text-red-500 transform transition duration-300 hover:scale-110">Contact</a>
+      </nav>
 
-    <!-- Resten af siden -->
-    <main 
-	class="flex-grow mt-5">
-      <slot />
-    </main>
+      <!-- Indhold -->
+      <main class="flex-grow mt-6 w-full max-w-5xl text-center sm:text-left">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

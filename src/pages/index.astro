@@ -1,15 +1,76 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-
 <Layout>
-     
-     <div class="flex justify-center mx-auto sm:px-6 md:px-8 pt-2">
-  <img
-    class="w-full max-w-4xl sm:max-w-5xl md:max-w-6xl object-cover transition duration-300 hover:scale-98 rounded-lg inset-shadow-sm/50"
-    src="/Billeder/poster.webp"
-    alt="Forside billede"
-  />
-</div>
-    
+  <div class="border-5 shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg relative w-full bg-[#272425] text-white">
+    <div class="max-w-6xl mx-auto px-5 pt-5 grid gap-2">
+
+      <!-- 1️ Tekst + billede -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-0 items-start">
+        <!-- Tekst styrer højden -->
+        <p class="bg-black rounded-lg m-0 p-4 text-left text-xl md:text-3xl font-bold border-4 border-[#272425]
+        transition duration-30 hover:scale-105 leading-tight">
+          Welcome to the RackaRacka website, here you can find all the latest news and updates about our films, projects, and events, or visit our shop to grab some exclusive merchandise!
+        </p>
+
+        <!-- Billede bliver cuttet ved tekstens højde på desktop, fuld højde på mobil -->
+        <div class="bg-black overflow-hidden rounded-lg border-4 border-[#272425] aspect-video 
+        transition duration-30 hover:scale-105 sm:aspect-auto sm:h-0 sm:min-h-full">
+          <img
+            class="w-full h-full object-cover"
+            src="/Billeder/guuci.png"
+            alt="RackaRacka X Gucci reklame"
+          />
+        </div>
+      </div>
+
+      <!-- 2️ Stor plakat -->
+      <div class="rounded-lg transform transition duration-30 hover:scale-105">
+        <img
+          class="w-full rounded-lg transform transition duration-30 hover:scale-105"
+          src="/Billeder/poster.webp"
+          alt="Plakat"
+        />
+      </div>
+
+      <!-- 3️ To store billeder -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <img
+          class="overflow-hidden bg-black aspect-square w-full rounded-lg object-cover border-4 transform transition duration-30 hover:scale-105 border-black"
+          src="/Billeder/poster2.jpeg"
+          alt="Billede 1"
+        />
+        <img
+          class="overflow-hidden bg-black aspect-square w-full rounded-lg object-cover border-4 transform transition duration-30 hover:scale-105 border-black"
+          src="/Billeder/poster2.jpeg"
+          alt="Billede 2"
+        />
+      </div>
+
+      <!-- 4️ Tre mindre billeder -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <img
+          class="overflow-hidden bg-black w-full aspect-square rounded-lg object-cover border-4 transform transition duration-30 hover:scale-105 border-black"
+          src="/Billeder/poster2.jpeg"
+          alt="Billede 3"
+        />
+        <img
+          class="overflow-hidden bg-black w-full aspect-square rounded-lg object-cover border-4 transform transition duration-30 hover:scale-105 border-black"
+          src="/Billeder/poster2.jpeg"
+          alt="Billede 4"
+        />
+        <img
+          class="overflow-hidden bg-black w-full aspect-square rounded-lg object-cover border-4 transform transition duration-30 hover:scale-105 border-black"
+          src="/Billeder/poster2.jpeg"
+          alt="Billede 5"
+        />
+      </div>
+
+      <!-- 5️ Bundsektion -->
+      <div class="overflow-hidden bg-black rounded-lg p-10 text-center text-2xl sm:text-3xl font-bold border-4 border-black transform transition duration-30 hover:scale-105">
+        Bundsektion
+      </div>
+
+    </div>
+  </div>
 </Layout>

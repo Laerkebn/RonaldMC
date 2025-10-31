@@ -3,22 +3,27 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
   <!-- Søgefelt -->
+<div
+class="text- white pt-2 m-2 border-5 bg-[#272425] shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg"
+>
+<p class="text-white text-center p-6 pt-2 text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black w-full mx-auto" 
+style="text-shadow: 2px 2px 0 [#6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425, -2px 2px 0 #272425, 3px 0 0 #000, -3px 0 0 #272425, 0 3px 0 #272425, 0 -3px 0 #272425;">
+  Welcome to the RackaRacka Merchandise Store, search for your favorite items!
+</p>
+<div class="flex text-[#6F6E70] pb-2 justify-center sm:justify-end sm:mr-10">
+<input
+  id="search"
+  type="text"
+  placeholder="Type something..."
+  class="w-[250px] text-[#6F6E70] placeholder-[#6F6E70] p-2 rounded-lg border-2 border-yellow-500 bg-black focus:ring-yellow-500"
+/>
 
- <p class="text-white text-center pt-5 pb-5 text-left text-3xl sm:text-5xl font-bold">
-    Welcome to the RackaRacka Merchandise Store, search for your favorite items!
-  </p><div class="flex pb-1 justify-center sm:justify-end sm:mr-10 mt-4">
-  <input
-    id="search"
-    type="text"
-    placeholder="Type something..."
-    class="w-[250px] p-2 rounded-lg border border-yellow-500 bg-black text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-  />
 </div>
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mx-10 pt-6 text-white">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mx-10 pt-8 text-white">
 
     <!-- T-shirt1 -->
-    <div class="w-full">
+    <div class="w-full ">
       <!-- Billede container med badge -->
       <div class="relative w-full">
         <img
@@ -352,7 +357,7 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
  </div>
-
+</div>
   <script>
 const searchInput = document.getElementById("search");
 const products = document.querySelectorAll(".grid > .w-full");

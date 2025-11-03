@@ -118,7 +118,9 @@ import Layout from "../layouts/Layout.astro";
   </h2>
 
   <!-- Input + knap -->
-  <div class="flex items-center justify-center border border-gray-500 w-full sm:w-[700px] mx-auto px-6 py-4 relative">
+  <div
+    class="flex items-center justify-center border border-gray-500 w-full sm:w-[700px] mx-auto px-6 py-4 relative"
+  >
     <input
       id="emailInput"
       type="text"
@@ -133,14 +135,45 @@ import Layout from "../layouts/Layout.astro";
     </button>
   </div>
 
-  <!-- Popup besked - nu INDEN FOR containeren -->
+  <!-- Popup besked -->
   <div
     id="popupMessage"
     class="hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300"
   >
     Your email has been added to the list
   </div>
+
+  <!-- subscrivbe -->
+  <script>
+  const subscribeButton = document.getElementById("subscribeButton");
+  const popupMessage = document.getElementById("popupMessage");
+  const emailInput = document.getElementById("emailInput") as HTMLInputElement; // 👈 vigtig linje
+
+  if (subscribeButton && popupMessage && emailInput) {
+    subscribeButton.addEventListener("click", () => {
+      const email = emailInput.value.trim(); // ✅ virker nu
+
+      if (email === "") {
+        popupMessage.textContent = "Please enter a valid email";
+        popupMessage.classList.remove("bg-green-600");
+        popupMessage.classList.add("bg-red-600");
+      } else {
+        popupMessage.textContent = "Your email has been added to the list";
+        popupMessage.classList.remove("bg-red-600");
+        popupMessage.classList.add("bg-green-600");
+        emailInput.value = "";
+      }
+
+      popupMessage.classList.remove("hidden");
+      popupMessage.style.opacity = "1";
+
+      setTimeout(() => {
+        popupMessage.style.opacity = "0";
+        setTimeout(() => popupMessage.classList.add("hidden"), 300);
+      }, 3000);
+    });
+  }
+</script>
+
+
 </div>
-    </div>
-  </div>
-</Layout>

@@ -354,8 +354,74 @@ style="text-shadow: 2px 2px 0 [#6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425,
       <p class="mt-2 text-left text-lg font-semibold">Soft Ronald Voodoo-Doll</p>
       <p class="text-left text-lg text-yellow-500 font-small">$20.00</p>
     </div>
-  </div>
 
+        <!--  Talk to me -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/ttm.png"
+          alt="Online Ceramics x Talk To Me 91 Seconds Long Sleeve"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Online Ceramics x Talk To Me 91 Seconds Long Sleeve</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$65.00</p>
+    </div>
+
+           <!-- Talk to me1 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/ttm1.png"
+          alt="Online Ceramics x Talk To Me Straight To Hell Tee"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Online Ceramics x Talk To Me Straight To Hell Tee</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$60.00</p>
+    </div>
+
+
+           <!-- Talk to me2-->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/ttm2.png"
+          alt="Talk To Me Party Hand"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Talk To Me Party Hand</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$110.00</p>
+    </div>
+
+           <!-- Talk to me3 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/ttm3.png"
+          alt="Talk To Me Original Motion Picture Soundtrack"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Talk To Me Original Motion Picture Soundtrack</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$30.00</p>
+    </div>
+
+               <!-- Talk to me4 -->
+    <div class="w-full">
+      <div class="relative w-full">
+        <img
+          class="w-full aspect-square object-cover border-4 border-yellow-500 transition duration-300 hover:scale-105 rounded-lg"
+          src="/merch/ttm4.png"
+          alt="Bring Her Back x Basketcase PomPom Tee"
+        />
+      </div>
+      <p class="mt-2 text-left text-lg font-semibold">Bring Her Back x Basketcase PomPom Tee</p>
+      <p class="text-left text-lg text-yellow-500 font-small">$0.00</p>
+    </div>
+
+  </div>
  </div>
 </div>
   <script>
@@ -377,4 +443,89 @@ if (searchInput) {
   });
 }
   </script>
+
+  <script is:inline>
+  const button = document.getElementById("subscribeButton");
+  const input = document.getElementById("emailInput");
+  const popup = document.getElementById("popupMessage");
+
+  button.addEventListener("click", () => {
+    if (input.value.trim() !== "") {
+      popup.classList.remove("hidden");
+      popup.classList.add("opacity-100");
+
+      setTimeout(() => {
+        popup.classList.add("hidden");
+        popup.classList.remove("opacity-100");
+      }, 2000);
+    }
+  });
+</script>
+
+</script>
+
+  <!-- Modal til billedevisning -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50 p-4">
+    <div class="relative bg-[#272425] rounded-lg max-w-2xl w-full p-6">
+      <!-- Luk knap -->
+      <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl hover:text-yellow-500 transition">&times;</button>
+      
+      <!-- Billede -->
+      <img id="modalImage" src="" alt="" class="w-full aspect-square object-cover border-4 border-yellow-500 rounded-lg mb-4">
+      
+      <!-- Produkt info -->
+      <div class="text-white">
+        <h3 id="modalTitle" class="text-2xl font-semibold mb-2"></h3>
+        <p id="modalPrice" class="text-xl text-yellow-500 font-semibold mb-4"></p>
+        
+        <!-- Add to cart knap -->
+        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal funktionalitet
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage") as HTMLImageElement;
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPrice = document.getElementById("modalPrice");
+    const closeModal = document.getElementById("closeModal");
+
+    // Tilføj click event til alle produkt billeder
+    const productImages = document.querySelectorAll(".grid > .w-full img:first-child");
+    
+    productImages.forEach((img) => {
+      img.addEventListener("click", () => {
+        const product = img.closest(".w-full");
+        const title = product?.querySelector("p.font-semibold")?.textContent || "";
+        const price = product?.querySelector("p.text-yellow-500")?.textContent || "";
+        
+        modalImage.src = (img as HTMLImageElement).src;
+        modalImage.alt = (img as HTMLImageElement).alt;
+        if (modalTitle) modalTitle.textContent = title;
+        if (modalPrice) modalPrice.textContent = price;
+        
+        modal?.classList.remove("hidden");
+        modal?.classList.add("flex");
+      });
+    });
+
+    // Luk modal når man klikker på luk knappen
+    closeModal?.addEventListener("click", () => {
+      modal?.classList.add("hidden");
+      modal?.classList.remove("flex");
+    });
+
+    // Luk modal når man klikker udenfor
+    modal?.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    });
+  </script>
+
 </Layout>

@@ -1,8 +1,87 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout>
-<div
-class="text- white pt-2 m-2 border-5 bg-[#272425] shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg"
->
+  <div
+    class="shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg relative w-full bg-[#272425] text-white"
+  >
+    <div class="max-w-6xl mx-auto px-5 pt-5 pb-5 grid gap-8">
+      <!-- Overskrift -->
+      <div class="text-center">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-black mb-4"
+          style="text-shadow: 2px 2px 0 #6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425, -2px 2px 0 #272425;"
+        >
+          Contact RackaRacka
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Business inquiries, collaboration requests, or fan messages — we’d love to hear from you.
+        </p>
+      </div>
+
+      <!-- Billede -->
+      <div class="rounded-lg overflow-hidden">
+        <img
+          class="w-full object-cover border-4 border-yellow-500"
+          src="/Billeder/ring.png"
+          alt="RackaRacka Contact Banner"
+        />
+      </div>
+
+      <!-- Kontaktformular -->
+      <div class="bg-black rounded-lg p-8">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-500">Get in Touch</h2>
+        <p class="text-gray-300 mb-6">
+          Fill out the form below or email us directly — we try our best to respond to everyone!
+        </p>
+
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          class="grid gap-5"
+        >
+          <div>
+            <label for="name" class="block mb-2 font-semibold">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block mb-2 font-semibold">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block mb-2 font-semibold">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition transform hover:scale-105"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </Layout>

@@ -3,84 +3,174 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div
-    class="shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg relative w-full bg-[#272425] text-white"
-  >
-    <div class="max-w-6xl mx-auto px-5 pt-5 pb-5 grid gap-8">
-      <!-- Overskrift -->
-      <div class="text-center">
-        <h1
-          class="text-4xl sm:text-5xl md:text-6xl font-black mb-4"
-          style="text-shadow: 2px 2px 0 #6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425, -2px 2px 0 #272425;"
-        >
+  <div class="shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-xl relative w-full bg-[#272425] text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+      
+      <!-- Header Section -->
+      <div class="text-center mb-14 lg:mb-20">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6"
+            style="text-shadow: 2px 2px 0 #6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425, -2px 2px 0 #272425;">
           Contact RackaRacka
         </h1>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Business inquiries, collaboration requests, or fan messages — we’d love to hear from you.
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed">
+          Business inquiries, collaboration requests, or fan messages — we'd love to hear from you.
         </p>
       </div>
 
-      <!-- Billede -->
-      <div class="rounded-lg overflow-hidden">
-        <img
-          class="w-full object-cover border-4 border-yellow-500"
-          src="/Billeder/ring.png"
-          alt="RackaRacka Contact Banner"
-        />
+      <!-- Main Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+        
+        <!-- Left Column -->
+        <div class="space-y-8">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-[300px] lg:h-[400px] object-cover border-4 border-yellow-500"
+              src="/Billeder/ring.png"
+              alt="RackaRacka Contact Banner"
+            />
+          </div>
+
+          <!-- Contact Info Cards -->
+          <div class="bg-black rounded-xl p-8 space-y-6">
+            <h3 class="text-2xl font-bold mb-6 text-yellow-500 text-center lg:text-left">Other Ways to Reach Us</h3>
+            
+            <div class="space-y-5">
+              <!-- Email -->
+              <div class="flex items-start gap-4 p-5 bg-[#272425] rounded-xl hover:bg-[#3a3738] transition shadow-sm">
+                <span class="text-3xl">📧</span>
+                <div>
+                  <p class="font-semibold text-lg mb-1">Email</p>
+                  <a href="mailto:contact@rackaracka.com" class="text-yellow-500 hover:text-yellow-400 transition font-medium">
+                    contact@rackaracka.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Business Inquiries -->
+              <div class="flex items-start gap-4 p-5 bg-[#272425] rounded-xl hover:bg-[#3a3738] transition shadow-sm">
+                <span class="text-3xl">💼</span>
+                <div>
+                  <p class="font-semibold text-lg mb-1">Business Inquiries</p>
+                  <a href="mailto:business@rackaracka.com" class="text-yellow-500 hover:text-yellow-400 transition font-medium">
+                    business@rackaracka.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Social Media -->
+              <div class="flex items-start gap-4 p-5 bg-[#272425] rounded-xl hover:bg-[#3a3738] transition shadow-sm">
+                <span class="text-3xl">📱</span>
+                <div>
+                  <p class="font-semibold text-lg mb-2">Social Media</p>
+                  <div class="flex flex-wrap gap-3">
+                    <a href="https://www.youtube.com/@therackaracka" target="_blank" rel="noopener noreferrer" 
+                       class="text-yellow-500 hover:text-yellow-400 transition font-medium">YouTube</a>
+                    <span class="text-gray-500">•</span>
+                    <a href="https://www.instagram.com/therackaracka/" target="_blank" rel="noopener noreferrer" 
+                       class="text-yellow-500 hover:text-yellow-400 transition font-medium">Instagram</a>
+                    <span class="text-gray-500">•</span>
+                    <a href="https://twitter.com/therackaracka" target="_blank" rel="noopener noreferrer" 
+                       class="text-yellow-500 hover:text-yellow-400 transition font-medium">Twitter</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Response Time -->
+              <div class="flex items-start gap-4 p-5 bg-[#272425] rounded-xl shadow-sm">
+                <span class="text-3xl">⏱️</span>
+                <div>
+                  <p class="font-semibold text-lg mb-1">Response Time</p>
+                  <p class="text-gray-400">We typically respond within 2-5 business days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Form -->
+        <div class="bg-black rounded-xl p-8 shadow-lg">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-yellow-500">Get in Touch</h2>
+          <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+            Fill out the form below and we'll get back to you as soon as possible!
+          </p>
+
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block mb-2 font-semibold text-lg">Name *</label>
+              <input
+                type="text" id="name" name="name" required placeholder="Your full name"
+                class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-xl p-4 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 transition"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block mb-2 font-semibold text-lg">Email *</label>
+              <input
+                type="email" id="email" name="email" required placeholder="your.email@example.com"
+                class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-xl p-4 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 transition"
+              />
+            </div>
+
+            <div>
+              <label for="subject" class="block mb-2 font-semibold text-lg">Subject *</label>
+              <select
+                id="subject" name="subject" required
+                class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-xl p-4 text-white focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 transition"
+              >
+                <option value="" disabled selected>Select a topic</option>
+                <option value="business">Business Inquiry</option>
+                <option value="collaboration">Collaboration Request</option>
+                <option value="fan">Fan Message</option>
+                <option value="press">Press/Media</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block mb-2 font-semibold text-lg">Message *</label>
+              <textarea
+                id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..."
+                class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-xl p-4 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 transition resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-xl text-lg transition transform hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl"
+            >
+              Send Message 📤
+            </button>
+
+            <p class="text-sm text-gray-400 text-center mt-4">* Required fields</p>
+          </form>
+        </div>
       </div>
 
-      <!-- Kontaktformular -->
-      <div class="bg-black rounded-lg p-8">
-        <h2 class="text-3xl font-bold mb-4 text-yellow-500">Get in Touch</h2>
-        <p class="text-gray-300 mb-6">
-          Fill out the form below or email us directly — we try our best to respond to everyone!
-        </p>
-
-        <form
-          action="https://formspree.io/f/your-form-id"
-          method="POST"
-          class="grid gap-5"
-        >
-          <div>
-            <label for="name" class="block mb-2 font-semibold">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-            />
+      <!-- FAQ Section -->
+      <div class="mt-14 lg:mt-20 bg-black rounded-xl p-8 shadow-lg">
+        <h3 class="text-3xl font-bold mb-6 text-yellow-500 text-center">Frequently Asked Questions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          
+          <div class="p-5 bg-[#272425] rounded-xl shadow-sm">
+            <p class="font-bold text-lg mb-2 text-yellow-400">🎬 Can I use your content?</p>
+            <p class="text-gray-300">Please contact us for licensing inquiries. Unauthorized use is prohibited.</p>
           </div>
 
-          <div>
-            <label for="email" class="block mb-2 font-semibold">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-            />
+          <div class="p-5 bg-[#272425] rounded-xl shadow-sm">
+            <p class="font-bold text-lg mb-2 text-yellow-400">🤝 Do you accept collaborations?</p>
+            <p class="text-gray-300">We're always open to interesting projects! Send us your proposal via the form.</p>
           </div>
 
-          <div>
-            <label for="message" class="block mb-2 font-semibold">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              class="w-full bg-[#272425] border-2 border-[#6F6E70] rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-            ></textarea>
+          <div class="p-5 bg-[#272425] rounded-xl shadow-sm">
+            <p class="font-bold text-lg mb-2 text-yellow-400">🎥 Can I visit your set?</p>
+            <p class="text-gray-300">We don't offer public tours, but keep an eye out for special events!</p>
           </div>
 
-          <button
-            type="submit"
-            class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition transform hover:scale-105"
-          >
-            Send Message
-          </button>
-        </form>
+          <div class="p-5 bg-[#272425] rounded-xl shadow-sm">
+            <p class="font-bold text-lg mb-2 text-yellow-400">📦 Merchandise issues?</p>
+            <p class="text-gray-300">For order problems, visit our <a href="/merch" class="text-yellow-500 hover:text-yellow-400 underline">merch page</a> for support.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

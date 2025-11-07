@@ -4,36 +4,36 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <div
-    class="shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg relative w-full bg-[#272425] text-white"
+    class="shadow-[0_10px_30px_rgba(0,0,0,0.7),0_25px_60px_rgba(217,39,39,0.3)] rounded-lg relative bg-[#272425] text-white"
   >
     <div class="w-full mx-auto p-5 lg:p-10 grid gap-8 lg:gap-12">
 
       
-      <!-- Hero Section: Text + Video -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-        
-        <!-- Welcome Text -->
-        <div class="bg-black rounded-lg p-6 lg:p-8 text-center lg:text-left flex flex-col justify-center h-full">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 lg:mb-6"
-              style="text-shadow: 2px 2px 0 #6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425, -2px 2px 0 #272425;">
-            Welcome to RackaRacka
-          </h1>
-          <p class="text-lg md:text-xl lg:text-2xl leading-relaxed">
-            Discover latest news and updates about our films, projects, and events, or visit our merch-shop
-          </p>
-        </div>
+<!-- Hero Section: Text + Video -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-6 items-stretch">
 
-        <!-- Promo Video -->
-        <div class="relative bg-black overflow-hidden rounded-lg transition duration-300 hover:scale-[1.02] h-full flex">
-          <iframe
-            id="promoVideo"
-            class="w-full h-full object-cover rounded-lg"
-            src="https://www.youtube.com/embed/sEAGMkIadV0?autoplay=1&mute=1&enablejsapi=1&loop=1&playlist=sEAGMkIadV0&controls=0&rel=0&modestbranding=1&showinfo=0"
-            title="RackaRacka X Gucci reklamevideo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+  <!-- Welcome Text -->
+  <div class="bg-black xl:bg-black/0 rounded-lg p-6 text-center flex flex-col justify-center h-full">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 lg:mb-6"
+        style="text-shadow: 2px 2px 0 #6F6E70, -2px -2px 0 #272425, 2px -2px 0 #272425, -2px 2px 0 #272425;">
+      Welcome to RackaRacka
+    </h1>
+    <p class="text-lg lg:text-2xl xl:text-3xl leading-relaxed">
+      Discover latest news and updates about our films, projects, and events, or visit our merch-shop
+    </p>
+  </div>
 
-          <!-- Sound Button -->
+  <!-- Promo Video -->
+  <div class="relative bg-black/80 xl:bg-black/90 overflow-hidden rounded-lg transition duration-300 hover:scale-[1.02] h-64 md:h-full xl:h-[700px] flex">
+    <iframe
+      id="promoVideo"
+      class="w-full h-full object-cover rounded-lg"
+      src="https://www.youtube.com/embed/sEAGMkIadV0?autoplay=1&mute=1&enablejsapi=1&loop=1&playlist=sEAGMkIadV0&controls=0&rel=0&modestbranding=1&showinfo=0"
+      title="RackaRacka X Gucci reklamevideo"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+    <!-- Sound Button -->
           <button
             id="unmuteButton"
             class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-md text-white text-sm px-4 py-2 rounded-lg border border-white/30 hover:bg-white/30 transition"
@@ -72,81 +72,76 @@ import Layout from "../layouts/Layout.astro";
         </a>
       </div>
 
-      <!-- Latest Events -->
-      <div>
-        <h2 class="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6 text-yellow-500">Latest Events</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          <a
-            href="/events"
-            class="block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500"
-          >
-            <img
-              class="w-full h-[300px] lg:h-[400px] object-cover"
-              src="/Billeder/event/wrestling4.png"
-              alt="Wrestling Event"
-            />
-          </a>
-          <a
-            href="/events"
-            class="block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500"
-          >
-            <img
-              class="w-full h-[300px] lg:h-[400px] object-cover"
-              src="/Billeder/talk2meposter.jpg"
-              alt="Talk To Me Event"
-            />
-          </a>
-        </div>
-      </div>
-
-      <!-- Newest Merch -->
-      <div>
-        <h2 class="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6 text-yellow-500">Newest Merch</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          
-          <!-- Gucci Collab -->
-          <a
-            href="/events"
-            class="block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 relative group"
-          >
-            <img class="w-full h-[300px] lg:h-[350px] object-cover" src="/Billeder/gucci.png" alt="Gucci Collaboration" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
-          </a>
-
-          <!-- Limited Poster -->
-          <a
-            href="/merch"
-            class="relative block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 group"
-          >
-            <img class="w-full h-[300px] lg:h-[350px] object-cover" src="/merch/poster1.webp" alt="Limited Edition Poster" />
-            <img
-              class="absolute top-[45%] right-[2%] w-[35%] lg:w-[40%] object-contain z-50 group-hover:scale-110 transition-transform"
-              src="/merch/limited.svg"
-              alt="Limited edition badge"
-            />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
-          </a>
-
-          <!-- Limited T-shirt -->
-          <a
-            href="/merch"
-            class="relative block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 group"
-          >
-            <img
-              class="w-full h-[300px] lg:h-[350px] object-cover"
-              src="/merch/t-shirt2.webp"
-              alt="Limited Edition T-shirt"
-            />
-            <img
-              class="absolute top-[45%] right-[2%] w-[35%] lg:w-[40%] object-contain z-50 group-hover:scale-110 transition-transform"
-              src="/merch/limited.svg"
-              alt="Limited edition badge"
-            />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
-          </a>
-        </div>
-      </div>
-
-    </div>
+<!-- Latest Events -->
+<div>
+  <h2 class="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6 text-yellow-500">Latest Events</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+    <a
+      href="/events"
+      class="block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 h-[300px] lg:h-[400px] xl:h-[950px]"
+    >
+      <img
+        class="w-full h-full object-cover"
+        src="/Billeder/event/wrestling4.png"
+        alt="Wrestling Event"
+      />
+    </a>
+    <a
+      href="/events"
+      class="block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 h-[300px] lg:h-[400px] xl:h-[950px]"
+    >
+      <img
+        class="w-full h-full object-cover"
+        src="/Billeder/talk2meposter.jpg"
+        alt="Talk To Me Event"
+      />
+    </a>
   </div>
+</div>
+
+<!-- Newest Merch -->
+<div>
+  <h2 class="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6 text-yellow-500">Newest Merch</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+    <!-- Gucci Collab -->
+    <a
+      href="/events"
+      class="block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 relative group h-[300px] lg:h-[350px] xl:h-[500px]"
+    >
+      <img class="w-full h-full object-cover" src="/Billeder/gucci.png" alt="Gucci Collaboration" />
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
+    </a>
+
+    <!-- Limited Poster -->
+    <a
+      href="/merch"
+      class="relative block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 group h-[300px] lg:h-[350px] xl:h-[500px]"
+    >
+      <img class="w-full h-full object-cover" src="/merch/poster1.webp" alt="Limited Edition Poster" />
+      <img
+        class="absolute top-[45%] right-[2%] w-[35%] lg:w-[40%] object-contain z-50 group-hover:scale-110 transition-transform"
+        src="/merch/limited.svg"
+        alt="Limited edition badge"
+      />
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
+    </a>
+
+    <!-- Limited T-shirt -->
+    <a
+      href="/merch"
+      class="relative block overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-[1.02] border-4 border-yellow-500 group h-[300px] lg:h-[350px] xl:h-[500px]"
+    >
+      <img class="w-full h-full object-cover" src="/merch/t-shirt2.webp" alt="Limited Edition T-shirt" />
+      <img
+        class="absolute top-[45%] right-[2%] w-[35%] lg:w-[40%] object-contain z-50 group-hover:scale-110 transition-transform"
+        src="/merch/limited.svg"
+        alt="Limited edition badge"
+      />
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
+    </a>
+
+  </div>
+</div>
+
 </Layout>
